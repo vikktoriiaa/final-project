@@ -1,4 +1,3 @@
-import { useState } from "react"
 type Card = {
   id: number,
   image: string,
@@ -12,22 +11,15 @@ type Card = {
 }
 type Props = Card & {
   theme: 'light' | 'dark';
+  likesCount: number;
+  dislikesCount: number;
+  increaseLikes: () => void;
+  increaseDislikes: () => void;
 }
 
 export const MediumCardView = (props: Props) => {
   
-const {id, date, title, image, imageLike, imageDislike, imageSave, imageDetails, theme} = props
-
-  const [likesCount, setLikesCount] = useState(0)
-  const[dislikesCount, setDislikesCount] = useState(0)
-  
-  const increaseLikes = () => {
-    setLikesCount(likesCount + 1)
-  }
-
-  const increaseDislikes = () => {
-    setDislikesCount(dislikesCount + 1)
-  }
+  const {id, date, title, image, imageLike, imageDislike, imageSave, imageDetails, theme,likesCount, dislikesCount, increaseLikes, increaseDislikes} = props
   
   return (
     <div key={id} className={`flex flex-col w-sm shadow-xl p-3 gap-2 border-1 border-gray-300 box-border ${theme === 'dark' ? 'bg-[#313037] text-white' : 'bg-[#f3f3f3] text-black'}`}>
