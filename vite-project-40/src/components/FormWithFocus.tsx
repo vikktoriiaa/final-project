@@ -10,10 +10,10 @@ const focusNext = () => {
   setcurrentField(currentField === refState.length - 1 ? 0 : currentField + 1);
   refState[currentField].current?.focus();
 }
-  return (<div>
-    <input ref= { nameRef } placeholder='имя' />
+  return (<div className="flex flex-col gap-4 p-5">
+    <input ref= { nameRef } placeholder='Name' />
 <input ref={emailRef} placeholder='Email' />
-<input ref={phoneRef} placeholder='Телефон' />
+<input ref={phoneRef} placeholder='Phone' />
 <button onClick={focusNext}>Следующее поле</button>
 </ div>)
 }
