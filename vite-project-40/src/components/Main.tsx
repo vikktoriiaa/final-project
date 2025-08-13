@@ -1,6 +1,6 @@
 import { THEME } from "../constants/theme"
 import { FormController } from "./form/FormController"
-import { FormWithFocus } from "./inputOnFocus"
+import { FormWithFocus } from "./FormWithFocus"
 
 type Props = {
   theme: string,
