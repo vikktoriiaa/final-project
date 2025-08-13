@@ -1,4 +1,4 @@
-import { InputWithLabel } from "./FormView"
+import { FormView } from "./FormView"
 import { useState } from "react"
 export const FormController = () => {
   const [formData, setFormData] = useState({
@@ -6,13 +6,24 @@ export const FormController = () => {
     email: '',
     password: '',
   })
+  const [submit, setSubmit] = useState(false)
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+    setSubmit(!submit); 
+  };
+  
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const key = e.target.name
-    console.log(formData)
     setFormData({ ...formData, [key]: e.target.value })
     
   }
-  return <InputWithLabel name={formData.name} email={formData.email} password={formData.password} onChange={handleOnChange}/>
+   
+  const handleGoHome = () => {
+    setSubmit(false);
+    setFormData({name:'', email: '', password: '' });
+  }
+  return <FormView name={formData.name} email={formData.email} password={formData.password} onChange={handleOnChange} submit={submit} handleGoHome={handleGoHome} handleSubmit={handleSubmit}/>
 }
  
