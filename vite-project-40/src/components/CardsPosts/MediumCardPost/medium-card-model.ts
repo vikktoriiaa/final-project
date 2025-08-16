@@ -2,8 +2,8 @@ export const MEDIUM_CARDS_POSTS = [
   {
     id: 101,
     image: "https://cdn.mos.cms.futurecdn.net/FmpZJJVrUEuiqgQmMFHqkE-840-80.jpg.webp",
-    date: "April 20, 2021",
-    title: "Astronauts prep for new solar arrays on nearly seven-hour spacewalk",
+    date: "April 20, 2025",
+    title: "Crew Dragon spacecraft with Russian cosmonaut returned to Earth",
     imageLike: '../../../public/like-2.svg',
     imageDislike: '../../../public/dislike-2.svg',
     imageSave: '../../../public/save-2.svg',
@@ -12,8 +12,8 @@ export const MEDIUM_CARDS_POSTS = [
    {
     id: 102,
     image: "https://cdn.mos.cms.futurecdn.net/FmpZJJVrUEuiqgQmMFHqkE-840-80.jpg.webp",
-    date: "April 20, 2021",
-    title: "Astronauts prep for new solar arrays on nearly seven-hour spacewalk",
+    date: "April 25, 2025",
+    title: "The Crew Dragon ship with the Russian Peskov undocked from the ISS",
     imageLike: '../../../public/like-2.svg',
     imageDislike: '../../../public/dislike-2.svg',
     imageSave: '../../../public/save-2.svg',
@@ -22,8 +22,8 @@ export const MEDIUM_CARDS_POSTS = [
     {
     id: 103,
     image: "https://cdn.mos.cms.futurecdn.net/FmpZJJVrUEuiqgQmMFHqkE-840-80.jpg.webp",
-    date: "April 20, 2021",
-    title: "Astronauts prep for new solar arrays on nearly seven-hour spacewalk",
+    date: "August 8, 2025",
+    title: "Apollo 13 commander Lovell has died on the Moon",
     imageLike: '../../../public/like-2.svg',
     imageDislike: '../../../public/dislike-2.svg',
     imageSave: '../../../public/save-2.svg',
@@ -32,8 +32,8 @@ export const MEDIUM_CARDS_POSTS = [
      {
     id: 104,
     image: "https://cdn.mos.cms.futurecdn.net/FmpZJJVrUEuiqgQmMFHqkE-840-80.jpg.webp",
-    date: "April 20, 2021",
-    title: "Astronauts prep for new solar arrays on nearly seven-hour spacewalk",
+    date: "August 5, 2025",
+    title: "NASA confirms plans to build a nuclear reactor on the Moon",
     imageLike: '../../../public/like-2.svg',
     imageDislike: '../../../public/dislike-2.svg',
     imageSave: '../../../public/save-2.svg',
