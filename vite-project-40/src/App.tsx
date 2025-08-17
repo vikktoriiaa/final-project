@@ -1,34 +1,21 @@
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
 import { Footer } from "./components/Footer";
-import { useState } from "react";
-import { THEME } from "./constants/theme";
-import { ListController } from "./components/CardsPosts/ListCardsPosts/ListController";
-import { useTheme } from "./hooks/useTheme";
+import { FormPage } from "./pages/FormPage";
+import { PostPage } from "./pages/PostPage";
+import { Routes, Route } from "react-router-dom";
 import { PostProvider } from "./contexts/PostContexts";
+import { HomePage } from "./pages/HomePage";
+import { HeaderController } from "./components/common/header/HeaderController";
 
 export function App() {
-  const { theme } = useTheme();
-
-  const [page, setPage] = useState<"home" | "form">("home");
-
   return (
     <PostProvider>
       <div className="flex flex-col min-h-screen">
-        {page === "home" && <Header onSignIn={() => setPage("form")} />}
-        {page === "form" && <Header onSignIn={() => setPage("form")} />}
-        {page === "home" && (
-          <div
-            className={`${
-              theme === THEME.DARK
-                ? "text-white bg-[#313037]"
-                : "text-black bg-[#f3f3f3]"
-            }`}
-          >
-            <ListController />
-          </div>
-        )}
-        {page === "form" && <Main onBackToHome={() => setPage("home")} />}
+        <HeaderController />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/form" element={<FormPage />} />
+          <Route path="/post/:id" element={<PostPage />} />
+        </Routes>
         <Footer />
       </div>
     </PostProvider>
