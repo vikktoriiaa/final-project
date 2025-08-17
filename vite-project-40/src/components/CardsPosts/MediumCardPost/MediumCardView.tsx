@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Card = {
   id: number;
   image: string;
@@ -35,13 +37,13 @@ export const MediumCardView = ({
   return (
     <div
       key={id}
-      className={`flex flex-col w-sm shadow-xl p-3 gap-2 border-1 border-gray-300 box-border ${
+      className={`flex flex-col w-sm shadow-xl p-3 gap-2 box-border ${
         theme === "dark" ? "bg-[#313037] text-white" : "bg-[#f3f3f3] text-black"
       }`}
     >
       <img src={image} alt="post photo" />
       <p className="text-xs text-[#bfbfbf]">{date}</p>
-      <h2 className="text-lg font-bold">{title}</h2>
+      <Link to={`/post/${id}`} className="text-lg font-bold">{title}</Link>
       <div className="flex gap-2 justify-between p-3">
         <div className="flex justify-center align-center gap-3">
           <button onClick={increaseLikes}>

@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 type Card = {
   id: number;
   image: string;
   date: string;
   title: string;
+  description?: string,
   imageLike: string;
   imageDislike: string;
   imageSave: string;
@@ -35,14 +38,14 @@ export const SmallCardView = ({
   return (
     <div
       key={id}
-      className={`w-sm h-[187px] shadow-xl p-3 border-1 border-gray-300 box-border ${
+      className={`w-sm h-[187px] shadow-xl p-2 box-border ${
         theme === "dark" ? "bg-[#313037] text-white" : "bg-[#f3f3f3] text-black"
       }`}
     >
       <div className="flex gap-4">
         <div className="flex flex-col gap-2">
           <p className="text-sm text-[#bfbfbf]">{date}</p>
-          <h2 className="text-lg font-bold">{title}</h2>
+          <Link to={`/post/${id}`} className="text-lg font-bold">{title}</Link>
         </div>
         <img src={image} alt="post photo" className="w-1/3 h-1/3" />
       </div>

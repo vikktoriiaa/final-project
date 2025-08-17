@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Card = {
   id: number;
   image: string;
@@ -32,10 +34,11 @@ export const LargCardView = ({
   increaseLikes,
   increaseDislikes,
 }: Props) => {
+
   return (
     <div
       key={id}
-      className={`w-3xl shadow-xl p-4 border border-gray-300 box-border
+      className={`w-3xl shadow-xl p-4 box-border
         ${
           theme === "dark"
             ? "bg-[#313037] text-white"
@@ -45,7 +48,7 @@ export const LargCardView = ({
       <div className="flex gap-3">
         <div className="flex flex-col gap-3">
           <p className="text-sm text-[#bfbfbf]">{date}</p>
-          <h2 className="text-2xl font-bold">{title}</h2>
+          <Link to={`/post/${id}`} className="text-2xl font-bold">{title}</Link>
           {description && (
             <p className="text-sm text-[#bfbfbf]">{description}</p>
           )}
