@@ -1,6 +1,7 @@
+import type { FC } from "react"
 import { Header } from "../Header"
 
-export const ContactUs = () => {
+export const ContactUs:FC = () => {
   return (
     <div>
       <Header />

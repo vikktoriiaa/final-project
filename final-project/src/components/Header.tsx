@@ -7,7 +7,7 @@ type Props = {}
 export const Header:FC<Props> = () => {
   return (
     <header className="flex justify-around items-center bg-[#232536] p-4 text-white">
-      <img src="../../public/Logo.svg" alt="logo"></img>
+      <img src="../../public/logo.svg" alt="logo"></img>
       <nav className="flex gap-6 cursor-pointer">
         <Link to="/" className=" hover:text-blue-400">Home</Link>
         <Link to="/blog" className=" hover:text-blue-400">Blog</Link>

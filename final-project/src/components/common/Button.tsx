@@ -6,6 +6,6 @@ type Props = {
 }
 export const Button:FC<Props> = ({text, background}) => {
   return (
-    <button className={`py-4 px-8 ${background} text-black font-bold`}>{text}</button>
+    <button className={`py-4 px-8 ${background} text-black font-bold cursor-pointer`}>{text}</button>
   )
 }
