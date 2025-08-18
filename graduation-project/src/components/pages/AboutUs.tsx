@@ -3,7 +3,7 @@ import { Header } from "../Header"
 export const AboutUs = () => {
   return (
     <div>
-      <Header />
+      <Header/>
       <h1 className="text-3xl font-bold underline text-center mt-96">About Us</h1>
     </div>
   )
