@@ -3,9 +3,10 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { App } from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { AboutUs } from './components/pages/AboutUs.tsx'
-import { Blog } from './components/pages/Blog.tsx'
-import { ContactUs } from './components/pages/ContactUs.tsx'
+import { AboutUs } from './components/pages/aboutUs/AboutUs.tsx'
+import { Blog } from './components/pages/blog/Blog.tsx'
+import { ContactUs } from './components/pages/contact/ContactUs.tsx'
+import { PrivatePolicy } from './components/pages/privatePolicy/PrivatePolicy.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/policy" element={<PrivatePolicy />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

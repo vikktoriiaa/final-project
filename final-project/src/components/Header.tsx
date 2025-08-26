@@ -14,7 +14,7 @@ export const Header:FC<Props> = () => {
         <Link to="/about" className=" hover:text-blue-400">About Us</Link>
         <Link to="/contact" className=" hover:text-blue-400">Contact Us</Link>
       </nav>
-      <Button text='Subscribe' background="bg-white"/>
+      <Button text='Subscribe' background="bg-white" color="text-black"/>
     </header>
   )
 }
