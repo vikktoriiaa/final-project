@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { App } from './App.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { AboutUs } from './components/pages/aboutUs/AboutUs.tsx'
-import { Blog } from './components/pages/blog/Blog.tsx'
-import { ContactUs } from './components/pages/contact/ContactUs.tsx'
-import { PrivatePolicy } from './components/pages/privatePolicy/PrivatePolicy.tsx'
+import { AboutUs } from './pages/aboutUs/AboutUs.tsx'
+import { Blog } from './pages/blog/Blog.tsx'
+import { ContactUs } from './pages/contact/ContactUs.tsx'
+import { PrivatePolicy } from './pages/privatePolicy/PrivatePolicy.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
