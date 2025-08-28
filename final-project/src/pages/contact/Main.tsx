@@ -26,10 +26,10 @@ export const Main: FC = () => {
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <input type="text" name="name" placeholder="Full Name" className="text-base/7 p-5 font-normal border border-[#6D6E7680]"></input>
-          <input type="email" name="name" placeholder="Your Email" className="text-base/7 p-5 font-normal border border-[#6D6E7680]"></input>
-          <label htmlFor="pet-select" className="text-base/7 pr-3">Query Related:</label>
-          <select name="queryRelated" id="queryRelated" className="text-base/7 px-2 py-1 border border-[#6D6E7680]">
+          <input type="text" name="name" placeholder="Full Name" className="text-base/7 p-5 font-normal border border-[#6D6E7680] w-full"></input>
+          <input type="email" name="email" placeholder="Your Email" className="text-base/7 p-5 font-normal border border-[#6D6E7680] w-full"></input>
+          <label className="text-base/7 pr-3 w-full">Query Related:</label>
+          <select name="queryRelated" id="queryRelated" className="text-base/7 px-2 py-1 border border-[#6D6E7680] w-full">
             <optgroup label="Query Related:">
               <option value="info">Product Information</option>
               <option value="support">Technical Support</option>
@@ -39,7 +39,7 @@ export const Main: FC = () => {
               <option value="other">Other</option>
             </optgroup>
           </select>
-          <textarea name="message" placeholder="Message" rows={5} className="text-base/7 p-5 font-normal border border-[#6D6E7680]"></textarea>
+          <textarea name="message" placeholder="Message" rows={5} className="text-base/7 p-5 font-normal border border-[#6D6E7680] w-full"></textarea>
           <Button text="Send Message" background="bg-[#FFD050]" color="text-black"/>
         </div>
       </section>

@@ -6,15 +6,16 @@ type Props = {
   icon: string,
   name: string,
   place: string,
+  color?: string
 }
 
-export const ReviewPost:FC<Props> = ({icon, name, place}) => {
+export const ReviewPost:FC<Props> = ({icon, name, place, color}) => {
   return (
     <div className="flex justify-between items-center">
       <div className="flex gap-2 items-center">
         <img src={`${icon}`} alt='reviewer' className="size-12"></img>
         <div className="flex flex-col">
-          <p className="font-bold text-lg/8">{ name }</p>
+          <p className={`font-bold text-lg/8 ${color}`}>{ name }</p>
           <p className="font-normal text-base/7">{place}</p> 
         </div>
       </div>
