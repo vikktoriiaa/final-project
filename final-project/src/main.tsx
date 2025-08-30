@@ -7,6 +7,7 @@ import { AboutUs } from './pages/aboutUs/AboutUs.tsx'
 import { Blog } from './pages/blog/Blog.tsx'
 import { ContactUs } from './pages/contact/ContactUs.tsx'
 import { PrivatePolicy } from './pages/privatePolicy/PrivatePolicy.tsx'
+import { BlogPosts } from './pages/blogPosts/BlogPosts.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/policy" element={<PrivatePolicy />} />
+        <Route path="/blogPosts" element={<BlogPosts />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

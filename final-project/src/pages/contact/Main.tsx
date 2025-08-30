@@ -4,13 +4,13 @@ import { Button } from "../../components/common/Button";
 export const Main: FC = () => {
   return (
     <main>
-      <section className="flex flex-col justify-center items-center py-[128px] px-[336px] gap-12">
+      <section className="flex flex-col justify-center items-center xl:py-32 sm:py-15 xl:px-84 sm:px-35 xxs:py-5 xxs:px-5 gap-12">
         <div className="flex flex-col justify-center items-center text-center gap-5">
           <p className="text-[#232536] text-base/5 font-black tracking-[3px]">Contact us</p>
-          <h4 className="text-[#232536] text-5xl/16 font-bold">Let’s Start a Conversation</h4>
-          <p className="text-[#6D6E76] font-normal text-base/7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+          <h4 className="text-[#232536] sm:text-5xl/16 xxs:text-2xl/10 font-bold">Let’s Start a Conversation</h4>
+          <p className="text-[#6D6E76] font-normal text-base/7 p-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
         </div>
-        <div className="bg-[#592EA9] py-12 px-16 flex gap-10 text-white">
+        <div className="bg-[#592EA9] lg:py-12 xxs:py-4 lg:px-16 xxs:px-5 flex sm:flex-row xxs:flex-col gap-10 text-white">
           <div className="flex flex-col gap-4">
             <p className="font-normal text-sm/5 opacity-60">Working hours</p>
             <div className="w-[294px] h-[1px] bg-white opacity-60"></div>
@@ -25,9 +25,9 @@ export const Main: FC = () => {
             <p className="font-normal text-base/7 opacity-60"><a href="mailto:hello@finsweet.com">hello@finsweet.com</a></p>
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-full">
-          <input type="text" name="name" placeholder="Full Name" className="text-base/7 p-5 font-normal border border-[#6D6E7680] w-full"></input>
-          <input type="email" name="email" placeholder="Your Email" className="text-base/7 p-5 font-normal border border-[#6D6E7680] w-full"></input>
+        <div className="flex flex-col gap-4 w-full p-5">
+          <input type="text" name="name" placeholder="Full Name" className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full"></input>
+          <input type="email" name="email" placeholder="Your Email" className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full"></input>
           <label className="text-base/7 pr-3 w-full">Query Related:</label>
           <select name="queryRelated" id="queryRelated" className="text-base/7 px-2 py-1 border border-[#6D6E7680] w-full">
             <optgroup label="Query Related:">
@@ -39,7 +39,7 @@ export const Main: FC = () => {
               <option value="other">Other</option>
             </optgroup>
           </select>
-          <textarea name="message" placeholder="Message" rows={5} className="text-base/7 p-5 font-normal border border-[#6D6E7680] w-full"></textarea>
+          <textarea name="message" placeholder="Message" rows={5} className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full"></textarea>
           <Button text="Send Message" background="bg-[#FFD050]" color="text-black"/>
         </div>
       </section>

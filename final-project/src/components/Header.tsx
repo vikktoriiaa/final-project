@@ -6,6 +6,13 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const scrollToFooter = () => {
+  const footerElement = document.getElementById('footer');
+  if (footerElement) {
+    footerElement.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
   return (
     <header className="bg-[#232536] relative p-4 text-white flex justify-between items-center w-full lg:gap-10">
       <img src="../../public/logo.svg" alt="logo" />
@@ -15,7 +22,7 @@ export const Header = () => {
         <Link to="/blog" className="hover:text-blue-400">Blog</Link>
         <Link to="/about" className="hover:text-blue-400">About Us</Link>
         <Link to="/contact" className="hover:text-blue-400">Contact Us</Link>
-        <Button text="Subscribe" background="bg-white" color="text-black" />
+        <Button text="Subscribe" background="bg-white" color="text-black" scrollToFooter={scrollToFooter} />
       </nav>
 
       {/* Кнопка бургер-меню для мобильных */}

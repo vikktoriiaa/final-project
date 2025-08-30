@@ -15,8 +15,8 @@ export const ReviewPost:FC<Props> = ({icon, name, place, color}) => {
       <div className="flex gap-2 items-center">
         <img src={`${icon}`} alt='reviewer' className="size-12"></img>
         <div className="flex flex-col">
-          <p className={`font-bold text-lg/8 ${color}`}>{ name }</p>
-          <p className="font-normal text-base/7">{place}</p> 
+          <p className={`font-bold sm:text-lg/8 xxs:text-xs/4 ${color}`}>{ name }</p>
+          <p className="font-normal sm:text-base/7 xxs:text-xs/4">{place}</p> 
         </div>
       </div>
       <div className="flex gap-2">

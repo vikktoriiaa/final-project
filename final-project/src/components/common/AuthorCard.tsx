@@ -14,7 +14,7 @@ type Props = {
 export const AuthorCard:FC<Props> = ({background, icon, text, title, facebook, twitter, instagram, linkedin}) => {
   return (
      <div className={`flex flex-col gap-2 ${ background } p-8 items-center justify-center`}>
-      <img src={`${icon}`} alt='icon' className="size-32 p-3"></img>
+      <img src={`${icon}`} alt='icon' className="sm:size-32 xxs:size-24 p-3"></img>
       <h4 className="font-bold text-2xl/10 text-[#232536]">{ title }</h4>
       <p className="text-[#6D6E76] font-normal text-sm/5">{ text }</p>
       <div className="flex gap-4">

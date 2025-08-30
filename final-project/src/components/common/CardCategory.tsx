@@ -10,9 +10,9 @@ type Props = {
 export const CardCategory:FC<Props> = ({ background, icon, text, title }) => {
   return (
     <div className={`flex flex-col gap-2 border border-[#96969a] ${background} p-8`}>
-      <img src={`${icon}`} alt='icon' className="size-12 bg-[#FBF6EA] p-3"></img>
-      <h4 className="font-bold text-2xl/10">{ title }</h4>
-      <p className="text-[#6D6E76] font-normal text-base/7">{ text }</p>
+      <div className="flex flex-col gap-2"><img src={`${icon}`} alt='icon' className="lg:size-12 xxs:size-10 bg-[#FBF6EA] p-3"></img>
+      <h4 className="font-bold lg:text-2xl/10 xss:text-xl/8">{ title }</h4></div>
+      <p className="text-[#6D6E76] font-normal text-base/7 lg:line-clamp-none xxs:line-clamp-2">{ text }</p>
     </div>
   )
 }
