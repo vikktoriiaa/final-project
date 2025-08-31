@@ -8,18 +8,22 @@ import { Blog } from './pages/blog/Blog.tsx'
 import { ContactUs } from './pages/contact/ContactUs.tsx'
 import { PrivatePolicy } from './pages/privatePolicy/PrivatePolicy.tsx'
 import { BlogPosts } from './pages/blogPosts/BlogPosts.tsx'
+import { Provider } from 'react-redux'
+import { store } from './lib/store.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/policy" element={<PrivatePolicy />} />
-        <Route path="/blogPosts" element={<BlogPosts />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/policy" element={<PrivatePolicy />} />
+          <Route path="/blogPosts" element={<BlogPosts />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
 )

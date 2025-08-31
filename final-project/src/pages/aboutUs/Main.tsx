@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { type FC } from "react";
 import { LastSection } from "../../components/common/LastSection";
 import { Quantity } from "../../components/common/Quantity";
 import { TitleSection } from "../../components/common/TitleSection";
@@ -6,9 +6,9 @@ import { AuthorCard } from "../../components/common/AuthorCard";
 
 export const Main: FC = () => {
   return (
-    <main>
+    <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="flex lg:flex-row xxs:flex-col justify-center items-center gap-8 xl:px-38 xl:pt-20 sm:px-10 sm:pt-10">
-        <div className="flex flex-col lg:p-16 xxs:p-3 bg-white gap-4">
+        <div className="flex flex-col lg:p-16 xxs:p-3 bg-white dark:bg-[#2e3040] gap-4">
           <p className="uppercase text-base/5 font-medium tracking-[3px]">ABOUT US</p>
           <h4 className="xl:text-5xl/16 sm:text-2xl/10 font-bold">We are a team of content writers who share their learnings</h4>
         </div>
@@ -24,7 +24,7 @@ export const Main: FC = () => {
           <Quantity number="30K+" text="Total active Users" />
         </div>
       </section>
-      <section className="flex justify-around my-10 sm:mx-20 xxs:mx-5 bg-[#F4F0F8]">
+      <section className="flex justify-around my-10 sm:mx-20 xxs:mx-5 bg-[#F4F0F8] dark:text-black">
         <div className="flex lg:flex-row xxs:flex-col sm:py-20 xxs:py-5 sm:px-20 xxs:px-5 gap-15">
           <div className="flex flex-col gap-6">
             <p className="uppercase text-base/7 font-semibold tracking-[3px]">Our mision</p>
@@ -40,8 +40,8 @@ export const Main: FC = () => {
       </section>
       <section className="flex lg:flex-row xxs:flex-col justify-center items-center xl:gap-20 sm:gap-10 xl:px-20 xl:py-16 sm:px-10 sm:py-10 xxs:px-5 xxs:py-4">
         <div className="flex flex-col gap-4 pb-2">
-          <h4 className="xl:text-4xl/12 sm:text-3xl/8 font-bold text-[#232536]">Our team of creatives</h4>
-          <p className="font-bold text-[#232536] xl:text-2xl/8 sm:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <h4 className="xl:text-4xl/12 sm:text-3xl/8 font-bold text-[#232536] dark:text-[#6D6E76]">Our team of creatives</h4>
+          <p className="font-bold text-[#232536] xl:text-2xl/8 sm:text-xl/8 dark:text-[#6D6E76]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
           <p className="font-normal xl:text-base/7 sm:text-xs/5 text-[#6D6E76] sm:line-clamp-none xxs:line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
         </div>
         <img src="../../../public/postSectionimg-1.png"></img>
@@ -49,8 +49,8 @@ export const Main: FC = () => {
       <section className="flex lg:flex-row xxs:flex-col justify-center items-center xl:gap-20 sm:gap-10 xl:px-20 xl:py-16 sm:px-10 sm:py-10 xxs:px-5 xxs:py-4">
         <img src="../../../public/postSectionimg-2.png"></img>
         <div className="flex flex-col gap-4 pt-2">
-          <h4 className="xl:text-4xl/12 sm:text-3xl/8 font-bold text-[#232536]">Why we started this Blog</h4>
-          <p className="font-bold text-[#232536] xl:text-2xl/8 sm:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          <h4 className="xl:text-4xl/12 sm:text-3xl/8 font-bold text-[#232536] dark:text-[#6D6E76]">Why we started this Blog</h4>
+          <p className="font-bold text-[#232536] xl:text-2xl/8 sm:text-xl/8 dark:text-[#6D6E76]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
           <p className="font-normal xl:text-base/7 sm:text-xs/5 text-[#6D6E76] sm:line-clamp-none xxs:line-clamp-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
         </div>
       </section>

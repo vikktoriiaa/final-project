@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, type FC } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./common/Button"; 
+import { useAppDispatch, useAppSelector } from "../hooks/storeHooks";
+import { toggleTheme } from "../features/theme/themeSlice";
 
-export const Header = () => {
+export const Header:FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+  const dispatch = useAppDispatch();
+  const {theme} = useAppSelector(state => state.theme)
 
   const scrollToFooter = () => {
   const footerElement = document.getElementById('footer');
@@ -14,19 +18,22 @@ export const Header = () => {
 };
 
   return (
-    <header className="bg-[#232536] relative p-4 text-white flex justify-between items-center w-full lg:gap-10">
-      <img src="../../public/logo.svg" alt="logo" />
+    <header id="header" className="bg-[#232536] relative p-4 text-white flex justify-between items-center w-full lg:gap-10">
+      <div className="flex gap-4 items-center">
+        <img src="../../public/logo.svg" alt="logo" />
+        <button className="p-1 text-black font-bold xxs:text-2xl/6 cursor-pointer" onClick={() => dispatch(toggleTheme())}> {theme === 'light' ? '☀️' : '🌙'} </button>
+      </div>
       {/* Меню для больших экранов */}
-      <nav className="hidden sm:flex gap-6 cursor-pointer items-center">
+      <nav className="hidden md:flex gap-6 cursor-pointer items-center">
         <Link to="/" className="hover:text-blue-400">Home</Link>
         <Link to="/blog" className="hover:text-blue-400">Blog</Link>
         <Link to="/about" className="hover:text-blue-400">About Us</Link>
         <Link to="/contact" className="hover:text-blue-400">Contact Us</Link>
-        <Button text="Subscribe" background="bg-white" color="text-black" scrollToFooter={scrollToFooter} />
+        <Button text="Subscribe" background="bg-white" color="text-black" func={scrollToFooter} />
       </nav>
 
       {/* Кнопка бургер-меню для мобильных */}
-      <button onClick={toggleMenu} className="sm:hidden focus:outline-none">
+      <button onClick={toggleMenu} className="md:hidden focus:outline-none">
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
         </svg>

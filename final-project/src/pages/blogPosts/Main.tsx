@@ -4,11 +4,13 @@ import { TitleSection } from "../../components/common/TitleSection";
 import { CardCategory } from "../../components/common/CardCategory";
 import { Button } from "../../components/common/Button";
 import { CategoryPost } from "../../components/common/CategoryPost";
+import { useAppSelector } from "../../hooks/storeHooks";
 
-export const Main:FC = () => {
+export const Main: FC = () => {
+  const { theme } = useAppSelector(state => state.theme)
   return (
-    <main>
-      <section className="bg-[#F4F0F8] flex lg:flex-row xxs:flex-col items-center xl:gap-30 xxs:gap-8 xl:p-20 xxs:p-5">
+    <main className="dark:bg-[#2e3040] dark:text-white">
+      <section className="bg-[#F4F0F8] flex lg:flex-row xxs:flex-col items-center xl:gap-30 xxs:gap-8 xl:p-20 xxs:p-5 dark:text-black">
         <div className="flex flex-col gap-2">
           <p className="uppercase text-base/5 font-medium md:tracking-[3px] xxs:tracking-normal">Featured Post</p>
           <h1 className="xl:text-[56px]/16 md:text-2xl/12 xxs:text-xl/10 font-bold pb-4 -tracking-[2px]">Step-by-step guide to choosing great font pairs</h1>

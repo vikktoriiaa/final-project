@@ -1,9 +1,11 @@
 import type { FC } from "react";
+import { useAppSelector } from "../../hooks/storeHooks";
 
 export const Main: FC = () => {
+  const { theme } = useAppSelector(state => state.theme)
   return (
-    <main>
-      <section className="bg-[#F4F0F8] flex flex-col gap-1 py-20 xl:px-[500px] text-center lg:px-[250px] md:px-[100px]">
+    <main className="dark:bg-[#2e3040] dark:text-white">
+      <section className="bg-[#F4F0F8] flex flex-col gap-1 py-20 xl:px-[500px] text-center lg:px-[250px] md:px-[100px] dark:text-black">
         <h3 className="font-bold lg:text-5xl/16 md:text-3xl/10 xs:text-2xl/8">Privacy Policy</h3>
         <p className="text-[#6D6E76] font-normal text-base/7">Last Updated  on 27th January 2022</p>
       </section>
