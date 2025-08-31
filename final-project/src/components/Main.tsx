@@ -15,9 +15,16 @@ export const Main: FC = () => {
   const navigate = useNavigate()
   const { theme } = useAppSelector(state => state.theme)
 
-  const scrollToHeader = () => {
-  navigate("/about#header")
-};
+  const navigateToAboutUs = () => {
+  navigate("/about");
+  window.scrollTo(0, 0);
+}
+
+  const navigateToBlogPosts = () => {
+  navigate("/blogPosts");
+  window.scrollTo(0, 0);
+  }
+  
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="relative h-screen bg-[url('../../public/bg.png')] bg-no-repeat bg-cover">
@@ -27,7 +34,7 @@ export const Main: FC = () => {
           <h1 className="lg:text-[56px]/16 md:text-4xl/12 xxs:text-xl/10 font-bold pb-6 -tracking-[2px]">Step-by-step guide to choosing great font pairs</h1>
           <p className="font-normal text-base/7 pb-4">By <span className="text-[#FFD050]">James West</span> |  May 23, 2022 </p>
           <p className="font-normal text-base/7 md:pr-80 md:pb-12 xxs:pr-20 xxs:pb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-          <Button text="Read More >" background="bg-[#FFD050]" color="text-black" func={scrollToHeader}/>
+          <Button text="Read More >" background="bg-[#FFD050]" color="text-black" func={navigateToAboutUs}/>
         </div>
       </section>
       <section className="flex md:flex-row xxs:flex-col md:py-32 md:px-20 xxs:py-10 xxs:px-5 gap-8">
@@ -44,7 +51,7 @@ export const Main: FC = () => {
         <div>
           <div className=" flex lg:flex-row justify-between items-center md:flex-col md:gap-4">
             <TitleSection title={"All Posts"} />
-            <button className="text-[#592ea9] xl:text-base/7 md:text-normal/5 font-medium hover:text-[#20074f]" onClick={() => navigate("/blogPosts")}>View All</button>
+            <button className="text-[#592ea9] xl:text-base/7 md:text-normal/5 font-medium hover:text-[#20074f]" onClick={navigateToBlogPosts}>View All</button>
           </div>
           <div className="mt-8 flex flex-col gap-4">
             <Post title="8 Figma design systems that you can download for free today." date="Aug 23, 2021" />
@@ -60,7 +67,7 @@ export const Main: FC = () => {
             <p className="uppercase text-base/7 font-semibold tracking-[3px]">About us</p>
             <h3 className="xl:text-4xl/12 md:text-2xl/7 font-bold">We are a community of content writers who share their learnings</h3>
             <p className="font-normal text-base/7 text-[#6D6E76]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <Button text="Read More >" background="bg-[#F4F0F8]" color='text-[#592EA9]'/>
+            <Button text="Read More >" background="bg-[#F4F0F8]" color='text-[#592EA9]' func={ navigateToAboutUs } />
           </div>
           <div className="flex flex-col gap-5">
             <p className="uppercase text-base/7 font-semibold tracking-[3px]">Our mision</p>

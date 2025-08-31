@@ -5,9 +5,24 @@ import { CardCategory } from "../../components/common/CardCategory";
 import { Button } from "../../components/common/Button";
 import { CategoryPost } from "../../components/common/CategoryPost";
 import { useAppSelector } from "../../hooks/storeHooks";
+import { nextPage, prevPage } from "../../features/posts/postSlice";
+import { useDispatch } from "react-redux";
+import { posts } from "../../constants/posts";
 
 export const Main: FC = () => {
+  const dispatch = useDispatch()
   const { theme } = useAppSelector(state => state.theme)
+  const currentPage = useAppSelector(state => state.posts.currentPage);
+  const postsPerPage = 5;
+  const maxPage = Math.ceil(posts.length / postsPerPage) - 1;
+
+  // Берём срез из 4 постов для текущей страницы
+  const currentPosts = posts.slice(
+    currentPage * postsPerPage,
+    currentPage * postsPerPage + postsPerPage
+  );
+
+
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="bg-[#F4F0F8] flex lg:flex-row xxs:flex-col items-center xl:gap-30 xxs:gap-8 xl:p-20 xxs:p-5 dark:text-black">
@@ -24,15 +39,19 @@ export const Main: FC = () => {
         <TitleSection title="All Posts" />
         <div className="w-full h-[1px] bg-[#6D6E76]"></div>
         <div className="flex flex-col gap-16">
-          <CategoryPost img="../../../public/blogPosts-2.png" category="Startup" title="Design tips for designers that cover everything you need" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <CategoryPost img="../../../public/blogPosts-3.png" category="BUSINESS" title="How to build rapport with your web design clients" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <CategoryPost img="../../../public/blogPosts-4.png" category="Startup" title="Logo design trends to avoid in 2022" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <CategoryPost img="../../../public/blogPosts-5.png" category="TECHNOLOGY" title="8 Figma design systems you can download for free today" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <CategoryPost img="../../../public/blogPosts-2.png" category="ECONOMY" title="Font sizes in UI design: The complete guide to follow" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          {currentPosts.map((post, index) => (
+            <CategoryPost 
+              key={index}
+              img={post.img}
+              category={post.category}
+              title={post.title}
+              text={post.text}
+            />
+          ))}
         </div>
         <div className="flex gap-4 mx-auto">
-          <button className="text-[#6D6E76] hover:text-black sm:text-2xl/8 xxs:text-xl/6 font-bold"> { "<" } Prev </button>
-          <button className="text-[#6D6E76] hover:text-black sm:text-2xl/8 xxs:text-xl/6 font-bold"> Next {">"}</button>
+          <button className="text-[#6D6E76] hover:text-black sm:text-2xl/8 xxs:text-xl/6 font-bold" onClick={() => dispatch(prevPage(maxPage))}> { "<" } Prev </button>
+          <button className="text-[#6D6E76] hover:text-black sm:text-2xl/8 xxs:text-xl/6 font-bold" onClick={() => dispatch(nextPage(maxPage))}> Next {">"}</button>
         </div>
       </section>
       <section className="flex flex-col justify-center items-center lg:gap-10 xxs:gap-5 mx-auto md:my-20 xxs:my-5 lg:px-20 xxs:px-5">
@@ -48,3 +67,4 @@ export const Main: FC = () => {
     </main>
   )
 }
+
