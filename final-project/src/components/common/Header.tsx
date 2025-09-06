@@ -1,8 +1,8 @@
 import { useState, type FC } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./common/Button"; 
-import { useAppDispatch, useAppSelector } from "../hooks/storeHooks";
-import { toggleTheme } from "../features/theme/themeSlice";
+import { Button } from "./Button"; 
+import { useAppDispatch, useAppSelector } from "../../hooks/storeHooks";
+import { toggleTheme } from "../../features/theme/themeSlice";
 
 export const Header:FC = () => {
   const [isOpen, setIsOpen] = useState(false);

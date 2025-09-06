@@ -3,7 +3,7 @@ import { Header } from "../../components/common/Header"
 import { Footer } from "../../components/common/Footer"
 import { Main } from "./Main"
 
-export const AboutUs:FC = () => {
+export const Home:FC = () => {
   return (
     <>
       <Header />
