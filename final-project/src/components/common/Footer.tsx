@@ -29,16 +29,16 @@ export const Footer: FC = () => {
         </div>
         <div className="flex gap-6">
           <button className="cursor-pointer">
-            <img src="../../public/footer-facebook.svg" className="size-4"></img>
+            <img src="../../footer-facebook.svg" className="size-4"></img>
           </button>
           <button className="cursor-pointer">
-            <img src="../../public/footer-twitter.svg" className="size-4"></img>
+            <img src="../../footer-twitter.svg" className="size-4"></img>
           </button>
           <button className="cursor-pointer">
-            <img src="../../public/footer-instagram.svg" className="size-4"></img>
+            <img src="../../footer-instagram.svg" className="size-4"></img>
           </button>
           <button className="cursor-pointer">
-            <img src="../../public/footer-linkedin.svg" className="size-4"></img>
+            <img src="../../footer-linkedin.svg" className="size-4"></img>
           </button>
         </div>
       </div>

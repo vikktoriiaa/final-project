@@ -20,7 +20,7 @@ export const Header:FC = () => {
   return (
     <header id="header" className="bg-[#232536] relative p-4 text-white flex justify-between items-center w-full lg:gap-10">
       <div className="flex gap-4 items-center">
-        <img src="../../public/logo.svg" alt="logo" />
+        <img src="../../logo.svg" alt="logo" />
         <button className="p-1 text-black font-bold xxs:text-2xl/6 cursor-pointer" onClick={() => dispatch(toggleTheme())}> {theme === 'light' ? '☀️' : '🌙'} </button>
       </div>
       {/* Меню для больших экранов */}
