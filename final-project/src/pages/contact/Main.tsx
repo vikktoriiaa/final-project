@@ -1,9 +1,7 @@
 import type { FC } from "react";
 import { Button } from "../../components/common/Button";
-import { useAppSelector } from "../../hooks/storeHooks";
 
 export const Main: FC = () => {
-  const { theme } = useAppSelector(state => state.theme)
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="flex flex-col justify-center items-center xl:py-32 sm:py-15 xl:px-84 sm:px-35 xxs:py-5 xxs:px-5 gap-12">

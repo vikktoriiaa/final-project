@@ -2,10 +2,10 @@ import type { FC } from "react";
 import { TitleSection } from "../../components/common/TitleSection";
 import { BlogPost } from "../../components/common/BlogPost";
 import { LastSection } from "../../components/common/LastSection";
-import { useAppSelector } from "../../hooks/storeHooks";
+
 
 export const Main: FC = () => {
-  const { theme } = useAppSelector(state => state.theme)
+
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="sm:pt-32 xxs:pt-10 lg:px-[300px] sm:px-16 xxs:px-3 pb-8 flex flex-col gap-8">

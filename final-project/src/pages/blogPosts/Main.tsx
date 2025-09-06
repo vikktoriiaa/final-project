@@ -11,7 +11,6 @@ import { posts } from "../../constants/posts";
 
 export const Main: FC = () => {
   const dispatch = useDispatch()
-  const { theme } = useAppSelector(state => state.theme)
   const currentPage = useAppSelector(state => state.posts.currentPage);
   const postsPerPage = 5;
   const maxPage = Math.ceil(posts.length / postsPerPage) - 1;

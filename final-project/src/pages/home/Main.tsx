@@ -9,11 +9,9 @@ import { LogoCompany } from "../../components/common/LogoCompany"
 import { ReviewPost } from "../../components/common/ReviewPost"
 import { LastSection } from "../../components/common/LastSection"
 import { useNavigate } from "react-router-dom"
-import { useAppSelector } from "../../hooks/storeHooks"
 
 export const Main: FC = () => {
   const navigate = useNavigate()
-  const { theme } = useAppSelector(state => state.theme)
 
   const navigateToAboutUs = () => {
   navigate("/about");
