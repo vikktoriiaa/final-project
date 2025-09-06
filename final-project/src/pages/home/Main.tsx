@@ -16,7 +16,7 @@ export const Main: FC = () => {
   const navigateToAboutUs = () => {
   navigate("/about");
   window.scrollTo(0, 0);
-}
+  }
 
   const navigateToBlogPosts = () => {
   navigate("/blogPosts");
@@ -25,7 +25,7 @@ export const Main: FC = () => {
   
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
-      <section className="relative h-screen bg-[url('../../public/bg.png')] bg-no-repeat bg-cover">
+      <section className="relative h-screen bg-[url('../../bg.png')] bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative xl:py-40 xl:pl-20 xl:pr-120 lg:py-20 lg:pl-10 lg:pr-60 md:py-10 md:pl-10 md:pr-30 xs:py-5 xs:pl-5 xs:pr-15 text-white xxs:p-5">
           <p className="uppercase text-base/5 font-medium md:tracking-[3px] xxs:tracking-normal pb-6">Posted on <span className="font-bold">startup</span></p>
@@ -39,7 +39,7 @@ export const Main: FC = () => {
         <div>
           <TitleSection title="Featured Post" />
           <div className="mt-8 border border-[#96969a] p-4">
-            <img src="../../public/feature.png" className="mb-8"></img>
+            <img src="../../feature.png" className="mb-8"></img>
             <Author date="May 23, 2022" />
             <h4 className="xl:text-2xl/8 md:text-xl/6 font-bold py-4 pr-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h4>
             <p className="font-normal xl:text-base/7 md:text-normal/5 text-[#6D6E76] pt-4 pb-8 hidden md:block">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
@@ -77,13 +77,13 @@ export const Main: FC = () => {
       <section className="flex flex-col justify-center items-center lg:gap-10 xxs:gap-5 mx-auto md:my-30 xxs:my-15 lg:px-20 xxs:px-5">
         <TitleSection title="Choose A Category" />
         <div className="flex gap-8 md:flex-nowrap xxs:flex-wrap justify-center">
-          <CardCategory icon="../../public/icon.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Business" />
-          <CardCategory background="bg-[#FFD050]" icon="../../public/shuttle.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Startup" />
-          <CardCategory icon="../../public/economy.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Economy" />
-          <CardCategory icon="../../public/cyborg.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Technology" />
+          <CardCategory icon="../../icon.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Business" />
+          <CardCategory background="bg-[#FFD050]" icon="../../shuttle.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Startup" />
+          <CardCategory icon="../../economy.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Economy" />
+          <CardCategory icon="../../cyborg.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Technology" />
         </div>
       </section>
-      <section className="xl:relative hidden bg-[url('../../public/bg-section.png')] content-[''] w-[949px] h-[705px] xl:flex justify-center items-end mx-30">
+      <section className="xl:relative hidden bg-[url('../../bg-section.png')] content-[''] w-[949px] h-[705px] xl:flex justify-center items-end mx-30">
         <div className="absolute flex flex-col gap-6 bg-white max-w-[706px] p-22 -mr-75 bottom-0 right-0 z-10 dark:text-black">
             <p className="uppercase text-base/7 font-semibold tracking-[3px]">Why we started</p>
             <h3 className="text-4xl/16 font-bold">It started out as a simple idea and evolved into our passion</h3>
@@ -94,10 +94,10 @@ export const Main: FC = () => {
       <section className="flex flex-col justify-center items-center gap-12 mx-auto md:my-30 xxs:my-10 px-20">
         <TitleSection title="List of Authors" />
         <div className="flex gap-8 lg:flex-nowrap xxs:flex-wrap justify-center">
-          <AuthorCard background="bg-[#F4F4F4]" icon="../../public/floyd.svg" text="Content Writer @Company" title="Floyd Miles" facebook="../../public/facebook.svg" twitter="../../public/twitter.svg" instagram="../../public/instagram.svg" linkedin="../../public/linkedin.svg" />
-          <AuthorCard background="bg-[#FBF6EA]" icon="../../public/dianne.svg" text="Content Writer @Company" title="Dianne Russell" facebook="../../public/facebook.svg" twitter="../../public/twitter.svg" instagram="../../public/instagram.svg" linkedin="../../public/linkedin.svg" />
-          <AuthorCard background="bg-[#F4F4F4]" icon="../../public/jenny.svg" text="Content Writer @Company" title="Jenny Wilson" facebook="../../public/facebook.svg" twitter="../../public/twitter.svg" instagram="../../public/instagram.svg" linkedin="../../public/linkedin.svg" />
-          <AuthorCard background="bg-[#F4F4F4]" icon="../../public/leslie.svg" text="Content Writer @Company" title="Leslie Alexander" facebook="../../public/facebook.svg" twitter="../../public/twitter.svg" instagram="../../public/instagram.svg" linkedin="../../public/linkedin.svg"/>
+          <AuthorCard background="bg-[#F4F4F4]" icon="../../floyd.svg" text="Content Writer @Company" title="Floyd Miles" facebook="../../facebook.svg" twitter="../../twitter.svg" instagram="../../instagram.svg" linkedin="../../linkedin.svg" />
+          <AuthorCard background="bg-[#FBF6EA]" icon="../../dianne.svg" text="Content Writer @Company" title="Dianne Russell" facebook="../../facebook.svg" twitter="../../twitter.svg" instagram="../../instagram.svg" linkedin="../../linkedin.svg" />
+          <AuthorCard background="bg-[#F4F4F4]" icon="../../jenny.svg" text="Content Writer @Company" title="Jenny Wilson" facebook="../../facebook.svg" twitter="../../twitter.svg" instagram="../../instagram.svg" linkedin="../../linkedin.svg" />
+          <AuthorCard background="bg-[#F4F4F4]" icon="../../leslie.svg" text="Content Writer @Company" title="Leslie Alexander" facebook="../../facebook.svg" twitter="../../twitter.svg" instagram="../../instagram.svg" linkedin="../../linkedin.svg" />
         </div>
       </section>
       <section className="flex xl:flex-nowrap xxs:flex-wrap justify-center items-center gap-10 px-20 md:py-10 xxs:py-5 dark:bg-[#F4F0F8] mx-20">
@@ -105,11 +105,11 @@ export const Main: FC = () => {
           <p className="text-[#8b8b8b] text-sm/5 font-normal">We are</p>
           <p className="text-[#6D6E76] font-bold text-2xl/8">Featured in</p>
         </div>
-        <LogoCompany logo="../../public/logo-1.svg" />
-        <LogoCompany logo="../../public/logo-2.svg" />
-        <LogoCompany logo="../../public/logo-3.svg" />
-        <LogoCompany logo="../../public/logo-4.svg" />
-        <LogoCompany logo="../../public/logo-5.svg" />
+        <LogoCompany logo="../../logo-1.svg" />
+        <LogoCompany logo="../../logo-2.svg" />
+        <LogoCompany logo="../../logo-3.svg" />
+        <LogoCompany logo="../../logo-4.svg" />
+        <LogoCompany logo="../../logo-5.svg" />
       </section>
       <section className="flex lg:flex-row xxs:flex-col lg:gap-24 xxs:gap-10 bg-[#FBF6EA] md:m-20 xxs:m-5 md:p-20 xxs:p-5 justify-center dark:text-black">
         <div className="flex flex-col gap-4 max-w-[345px]">
@@ -120,7 +120,7 @@ export const Main: FC = () => {
         <div className="bg-[#6D6E76] w-[1px] h-[310px] hidden lg:block"></div>
         <div className="flex flex-col xl:gap-30 md:gap-10 max-w-[500px]">
           <p className="font-bold md:text-2xl/8 xxs:text-base/6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <ReviewPost icon="../../public/reviewer-1.svg" name="Jonathan Vallem" place="New york, USA" />
+          <ReviewPost icon="../../reviewer-1.svg" name="Jonathan Vallem" place="New york, USA" />
         </div>
       </section>
       <LastSection />

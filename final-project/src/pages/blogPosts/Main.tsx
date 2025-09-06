@@ -21,7 +21,6 @@ export const Main: FC = () => {
     currentPage * postsPerPage + postsPerPage
   );
 
-
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="bg-[#F4F0F8] flex lg:flex-row xxs:flex-col items-center xl:gap-30 xxs:gap-8 xl:p-20 xxs:p-5 dark:text-black">
@@ -32,7 +31,7 @@ export const Main: FC = () => {
           <p className="font-normal text-base/7">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
           <Button text="Read More >" background="bg-[#FFD050]" color="text-black"/>
         </div>
-        <img src="../../../public/blogPosts-1.png" className="max-w-[515px] w-full"></img>
+        <img src="../../../blogPosts-1.png" className="max-w-[515px] w-full"></img>
       </section>
       <section className="flex flex-col gap-10 sm:px-20 xxs:px-5 py-10">
         <TitleSection title="All Posts" />
@@ -56,10 +55,10 @@ export const Main: FC = () => {
       <section className="flex flex-col justify-center items-center lg:gap-10 xxs:gap-5 mx-auto md:my-20 xxs:my-5 lg:px-20 xxs:px-5">
         <TitleSection title="All Categories" />
         <div className="flex gap-8 md:flex-nowrap xxs:flex-wrap justify-center">
-          <CardCategory icon="../../public/icon.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Business" />
-          <CardCategory icon="../../public/shuttle.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Startup" />
-          <CardCategory icon="../../public/economy.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Economy" />
-          <CardCategory icon="../../public/cyborg.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Technology" />
+          <CardCategory icon="../../icon.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Business" />
+          <CardCategory icon="../../shuttle.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Startup" />
+          <CardCategory icon="../../economy.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Economy" />
+          <CardCategory icon="../../cyborg.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Technology" />
         </div>
       </section>
       <LastSection />

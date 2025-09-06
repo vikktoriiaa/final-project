@@ -6,7 +6,7 @@ export const Footer: FC = () => {
   return (
     <footer className="bg-[#232536] lg:py-14 lg:px-20 flex flex-col gap-8 md:px-10 md:py-7" id="footer">
       <div className="flex sm:flex-row justify-between items-center bg-[#232536] p-4 text-white xxs:flex-col gap-2 xxs:items-start">
-        <img src="../../public/logo.svg" alt="logo"></img>
+        <img src="../../logo.svg" alt="logo"></img>
         <nav className="flex sm:flex-row sm:gap-6 xxs:flex-col xxs:gap-2 gap-6 cursor-pointer">
           <Link to="/" className=" hover:text-blue-400">Home</Link>
           <Link to="/blog" className=" hover:text-blue-400">Blog</Link>

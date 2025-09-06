@@ -10,7 +10,7 @@ export const Main: FC = () => {
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="sm:pt-32 xxs:pt-10 lg:px-[300px] sm:px-16 xxs:px-3 pb-8 flex flex-col gap-8">
         <div className="flex gap-2 items-center">
-          <img src="../../../public/reviewer-1.svg" alt='reviewer' className="sm:size-12 xxs:size-10"></img>
+          <img src="../../../reviewer-1.svg" alt='reviewer' className="sm:size-12 xxs:size-10"></img>
           <div className="flex flex-col">
             <p className="font-bold sm:text-3xl/10 xxs:text-xl/8 text-[#592EA9]">Andrew Jonson</p>
             <p className="font-normal text-base/7">Posted on 27th January 2022</p> 
@@ -18,12 +18,12 @@ export const Main: FC = () => {
         </div>
         <h4 className="sm:text-5xl/16 xxs:text-2xl/12 font-bold">Step-by-step guide to choosing great font pairs</h4>
         <div className="flex gap-3 items-center">
-          <img src="../../../public/shuttle.svg" className="size-6"></img>
+          <img src="../../../shuttle.svg" className="size-6"></img>
           <p className="font-bold sm:text-2xl/8 xxs:text-xl/6">Startup</p>
         </div>
       </section>
       <section className="sm:px-20 xxs:px-3  py-8">
-        <img src="../../../public/blog-img.png"></img>
+        <img src="../../../blog-img.png"></img>
       </section>
       <section className="flex flex-col py-8 xl:px-[330px] gap-8 lg:px-[250px] md:px-[100px] xxs:px-10 xxs:py-10">
         <h4 className="font-bold lg:text-4xl/12 md:text-2xl/10 xs:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h4>
@@ -44,9 +44,9 @@ export const Main: FC = () => {
       <section className="flex flex-col gap-8 pt-24 px-20">
         <TitleSection title="What to read next" />
         <div className="flex sm:flex-row xxs:flex-col gap-8">
-          <BlogPost img="../../../public/blogPost-1.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <BlogPost img="../../../public/blogPost-2.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <BlogPost img="../../../public/blogPost-3.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          <BlogPost img="../../../blogPost-1.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          <BlogPost img="../../../blogPost-2.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          <BlogPost img="../../../blogPost-3.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
         </div>
         <div className="w-full h-[1px] bg-[#6D6E76]"></div>
       </section>
