@@ -43,7 +43,7 @@ export const Main: FC = () => {
             <Author date="May 23, 2022" />
             <h4 className="xl:text-2xl/8 md:text-xl/6 font-bold py-4 pr-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h4>
             <p className="font-normal xl:text-base/7 md:text-normal/5 text-[#6D6E76] pt-4 pb-8 hidden md:block">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-            <Button text="Read More >" background="bg-[#FFD050]" color="text-black"/>
+            <Button text="Read More >" background="bg-[#FFD050]" color="text-black" func={ navigateToAboutUs }/>
           </div>
         </div>
         <div>
@@ -88,7 +88,7 @@ export const Main: FC = () => {
             <p className="uppercase text-base/7 font-semibold tracking-[3px]">Why we started</p>
             <h3 className="text-4xl/16 font-bold">It started out as a simple idea and evolved into our passion</h3>
             <p className="font-normal text-base/7 text-[#6D6E76]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-            <Button text="Discover our story >" background="bg-[#FFD050]" color='text-black'/>
+            <Button text="Discover our story >" background="bg-[#FFD050]" color='text-black' func={ navigateToAboutUs }/>
           </div>
       </section>
       <section className="flex flex-col justify-center items-center gap-12 mx-auto md:my-30 xxs:my-10 px-20">

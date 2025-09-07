@@ -10,6 +10,7 @@ import { PrivatePolicy } from './pages/privatePolicy/PrivatePolicy.tsx'
 import { BlogPosts } from './pages/blogPosts/BlogPosts.tsx'
 import { Provider } from 'react-redux'
 import { store } from './lib/store.ts'
+import { Error404 } from './components/Error.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/policy" element={<PrivatePolicy />} />
           <Route path="/blogPosts" element={<BlogPosts />} />
+          <Route path="*" element={<Error404/>} />
         </Routes>
       </BrowserRouter>
     </Provider>
