@@ -1,6 +1,8 @@
 import type { FC } from "react"
 import { NextButton } from "../svg/NextButton"
 import { BackButton } from "../svg/BackButton"
+import { prevReview, nextReview } from "../../features/reviews/reviewSlice"
+import { useAppDispatch } from "../../hooks/storeHooks"
 
 type Props = {
   icon: string,
@@ -9,7 +11,8 @@ type Props = {
   color?: string
 }
 
-export const ReviewPost:FC<Props> = ({icon, name, place, color}) => {
+export const ReviewPost: FC<Props> = ({ icon, name, place, color }) => {
+  const dispatch = useAppDispatch();
   return (
     <div className="flex justify-between items-center">
       <div className="flex gap-2 items-center">
@@ -20,13 +23,13 @@ export const ReviewPost:FC<Props> = ({icon, name, place, color}) => {
         </div>
       </div>
       <div className="flex gap-2">
-        <button className="group p-2 rounded-full bg-white hover:bg-[#232536] transition-colors cursor-pointer">
+        <button className="group p-2 rounded-full bg-white hover:bg-[#232536] transition-colors cursor-pointer" onClick={() => dispatch(prevReview())}>
           <BackButton
             classNameCircle="fill-white group-hover:fill-[#232536] transition-colors"
             classNamePath="fill-[#232536] group-hover:fill-white transition-colors"
           />
         </button>
-        <button className="group p-2 rounded-full bg-white hover:bg-[#232536] transition-colors cursor-pointer">
+        <button className="group p-2 rounded-full bg-white hover:bg-[#232536] transition-colors cursor-pointer" onClick={() => dispatch(nextReview())}>
           <NextButton
             classNameCircle="fill-white group-hover:fill-[#232536] transition-colors"
             classNamePath="fill-[#232536] group-hover:fill-white transition-colors" />

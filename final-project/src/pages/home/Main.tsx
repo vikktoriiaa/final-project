@@ -9,9 +9,12 @@ import { LogoCompany } from "../../components/common/LogoCompany"
 import { ReviewPost } from "../../components/common/ReviewPost"
 import { LastSection } from "../../components/common/LastSection"
 import { useNavigate } from "react-router-dom"
+import { useAppSelector } from "../../hooks/storeHooks"
 
 export const Main: FC = () => {
   const navigate = useNavigate()
+  const { currentIndex, reviews } = useAppSelector(state => state.reviews);
+  const currentReview = reviews[currentIndex];
 
   const navigateToAboutUs = () => {
   navigate("/about");
@@ -119,8 +122,12 @@ export const Main: FC = () => {
           </div>
         <div className="bg-[#6D6E76] w-[1px] h-[310px] hidden lg:block"></div>
         <div className="flex flex-col xl:gap-30 md:gap-10 max-w-[500px]">
-          <p className="font-bold md:text-2xl/8 xxs:text-base/6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <ReviewPost icon="../../reviewer-1.svg" name="Jonathan Vallem" place="New york, USA" />
+          <p className="font-bold md:text-2xl/8 xxs:text-base/6 ">{currentReview.text}</p>
+          <ReviewPost 
+          icon={currentReview.icon} 
+          name={currentReview.name} 
+          place={currentReview.place}
+        />
         </div>
       </section>
       <LastSection />

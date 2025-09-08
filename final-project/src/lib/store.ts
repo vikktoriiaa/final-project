@@ -1,8 +1,9 @@
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import { themeSlice } from "../features/theme/themeSlice";
 import { postsSlice } from "../features/posts/postSlice";
+import { reviewSlice } from "../features/reviews/reviewSlice";
 
-const rootReducer = combineSlices(themeSlice, postsSlice)
+const rootReducer = combineSlices(themeSlice, postsSlice, reviewSlice)
 
 export const store = configureStore({
   reducer: rootReducer,
