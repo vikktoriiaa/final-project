@@ -9,7 +9,7 @@ type Props = {
 
 export const BlogPost:FC<Props> = ({img, title, text}) => {
   return (
-    <div className="flex flex-col gap-4 p-1">
+    <div className="flex flex-col gap-4 p-1 transform transition-transform duration-300 ease hover:scale-105">
       <img src={ img }></img>
       <Author date="Aug 23, 2021 " />
       <h4 className="lg:text-3xl/10 sm:text-xl/8 font-bold">{ title }</h4>
