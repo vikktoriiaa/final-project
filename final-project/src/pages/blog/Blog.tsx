@@ -1,14 +1,14 @@
-import type { FC } from "react"
-import { Header } from "../../components/common/Header"
-import { Footer } from "../../components/common/Footer"
-import { Main } from "./Main"
+import type { FC } from "react";
+import { Header } from "../../components/common/Header";
+import { Footer } from "../../components/common/Footer";
+import { Main } from "./Main";
 
-export const Blog:FC = () => {
+export const Blog: FC = () => {
   return (
     <>
       <Header />
-      <Main/>
-      <Footer/>
+      <Main />
+      <Footer />
     </>
-  )
-}
+  );
+};

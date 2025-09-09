@@ -1,14 +1,14 @@
-import type { FC } from "react"
-import { Header } from "../../components/common/Header"
-import { Footer } from "../../components/common/Footer"
-import { Main } from "./Main"
+import type { FC } from "react";
+import { Header } from "../../components/common/Header";
+import { Footer } from "../../components/common/Footer";
+import { Main } from "./Main";
 
-export const PrivatePolicy:FC = () => {
+export const PrivatePolicy: FC = () => {
   return (
     <>
       <Header />
-      <Main/>
-      <Footer/>
+      <Main />
+      <Footer />
     </>
-  )
-}
+  );
+};

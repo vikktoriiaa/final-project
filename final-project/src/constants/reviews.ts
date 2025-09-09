@@ -12,8 +12,9 @@ export const reviews = [
     place: "London, UK",
   },
   {
-    text: "Reading the posts on this blog has really helped me improve my skills. The authors clearly know their topics and present information in an accessible way.",      icon: "../../reviewer-1.svg",
+    text: "Reading the posts on this blog has really helped me improve my skills. The authors clearly know their topics and present information in an accessible way.",
+    icon: "../../reviewer-1.svg",
     name: "Michael Johnson",
     place: "Sydney, Australia",
   },
-]
+];
