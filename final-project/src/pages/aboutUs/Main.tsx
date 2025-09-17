@@ -18,7 +18,7 @@ export const Main: FC = () => {
       </section>
       <section className="sm:px-20 xxs:px-5 relative">
         <img src="../../../about-img.png"></img>
-        <div className="absolute hidden bg-[#FFD050] sm:flex gap-4 -bottom-5 left-30 p-6">
+        <div className="absolute hidden bg-yellow sm:flex gap-4 -bottom-5 left-30 p-6">
           <Quantity text="Blogs Published" number="12+" />
           <Quantity number="18K+" text="Views on Finsweet" />
           <Quantity number="30K+" text="Total active Users" />
