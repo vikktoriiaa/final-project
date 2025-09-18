@@ -28,7 +28,7 @@ export const Main: FC = () => {
   
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
-      <section className="relative h-screen bg-[url('../../bg.png')] bg-no-repeat bg-cover">
+      <section className="relative h-screen bg-[url('../../bg.webp')] bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative xl:py-40 xl:pl-20 xl:pr-120 lg:py-20 lg:pl-10 lg:pr-60 md:py-10 md:pl-10 md:pr-30 xs:py-5 xs:pl-5 xs:pr-15 text-white xxs:p-5">
           <p className="uppercase text-base/5 font-medium md:tracking-[3px] xxs:tracking-normal pb-6">Posted on <span className="font-bold">startup</span></p>
@@ -86,7 +86,7 @@ export const Main: FC = () => {
           <CardCategory icon="../../cyborg.svg" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." title="Technology" />
         </div>
       </section>
-      <section className="xl:relative hidden bg-[url('../../bg-section.png')] content-[''] w-[949px] h-[705px] xl:flex justify-center items-end mx-30">
+      <section className="xl:relative hidden bg-[url('../../bg-section.webp')] content-[''] w-[949px] h-[705px] xl:flex justify-center items-end mx-30">
         <div className="absolute flex flex-col gap-6 bg-white max-w-[706px] p-22 -mr-75 bottom-0 right-0 z-10 dark:text-black">
             <p className="uppercase text-base/7 font-semibold tracking-[3px]">Why we started</p>
             <h3 className="text-4xl/16 font-bold">It started out as a simple idea and evolved into our passion</h3>

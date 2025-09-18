@@ -31,7 +31,7 @@ export const Main: FC = () => {
           <p className="font-normal text-base/7">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
           <Button text="Read More >" background="bg-yellow" color="text-black"/>
         </div>
-        <img src="../../../blogPosts-1.png" className="max-w-[515px] w-full"></img>
+        <img src="../../../blogPost-4.webp" className="max-w-[515px] w-full"></img>
       </section>
       <section className="flex flex-col gap-10 sm:px-20 xxs:px-5 py-10">
         <TitleSection title="All Posts" />

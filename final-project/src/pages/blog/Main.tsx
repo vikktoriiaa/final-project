@@ -23,7 +23,7 @@ export const Main: FC = () => {
         </div>
       </section>
       <section className="sm:px-20 xxs:px-3  py-8">
-        <img src="../../../blog-img.png"></img>
+        <img src="../../../blog-img.webp"></img>
       </section>
       <section className="flex flex-col py-8 xl:px-[330px] gap-8 lg:px-[250px] md:px-[100px] xxs:px-10 xxs:py-10">
         <h4 className="font-bold lg:text-4xl/12 md:text-2xl/10 xs:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h4>
@@ -44,9 +44,9 @@ export const Main: FC = () => {
       <section className="flex flex-col gap-8 pt-24 px-20">
         <TitleSection title="What to read next" />
         <div className="flex sm:flex-row xxs:flex-col gap-8">
-          <BlogPost img="../../../blogPost-1.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <BlogPost img="../../../blogPost-2.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-          <BlogPost img="../../../blogPost-3.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          <BlogPost img="../../../blogPost-1.webp" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          <BlogPost img="../../../blogPost-2.webp" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
+          <BlogPost img="../../../blogPost-3.webp" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
         </div>
         <div className="w-full h-[1px] bg-medium-gray"></div>
       </section>
