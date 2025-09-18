@@ -14,13 +14,13 @@ export const LastSection: FC = () => {
         <h4 className="md:text-4xl/12 xxs:text-2xl/8 font-bold">
           Join our team to be a part of our story
         </h4>
-        <p className="font-normal text-base/7 text-[#6D6E76] mb-4">
+        <p className="font-normal text-base/7 text-medium-gray mb-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt.
         </p>
         <Button
           text="Join Now"
-          background="bg-[#FFD050]"
+          background="bg-yellow"
           color="text-black"
           func={navigateToContact}
         />

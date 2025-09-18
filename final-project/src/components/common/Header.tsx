@@ -20,7 +20,7 @@ export const Header: FC = () => {
   return (
     <header
       id="header"
-      className="bg-[#232536] relative p-4 text-white flex justify-between items-center w-full lg:gap-10"
+      className="bg-black relative p-4 text-white flex justify-between items-center w-full lg:gap-10"
     >
       <div className="flex gap-4 items-center">
         <img src="../../logo.svg" alt="logo" />
@@ -74,7 +74,7 @@ export const Header: FC = () => {
 
       {/* Мобильное меню при открытии */}
       {isOpen && (
-        <nav className="absolute top-full left-0 w-full bg-[#232536] flex flex-col items-center gap-4 py-4 sm:hidden z-10">
+        <nav className="absolute top-full left-0 w-full bg-black flex flex-col items-center gap-4 py-4 sm:hidden z-10">
           <Link
             to="/"
             className="hover:text-blue-400"

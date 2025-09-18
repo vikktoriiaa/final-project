@@ -5,10 +5,10 @@ import { Button } from "./Button";
 export const Footer: FC = () => {
   return (
     <footer
-      className="bg-[#232536] lg:py-14 lg:px-20 flex flex-col gap-8 md:px-10 md:py-7"
+      className="bg-black lg:py-14 lg:px-20 flex flex-col gap-8 md:px-10 md:py-7"
       id="footer"
     >
-      <div className="flex sm:flex-row justify-between items-center bg-[#232536] p-4 text-white xxs:flex-col gap-2 xxs:items-start">
+      <div className="flex sm:flex-row justify-between items-center bg-black p-4 text-white xxs:flex-col gap-2 xxs:items-start">
         <img src="../../logo.svg" alt="logo"></img>
         <nav className="flex sm:flex-row sm:gap-6 xxs:flex-col xxs:gap-2 gap-6 cursor-pointer">
           <Link to="/" className=" hover:text-blue-400">
@@ -37,19 +37,19 @@ export const Footer: FC = () => {
             type="email"
             name="email"
             placeholder="Enter your email..."
-            className="border border-[#6D6E76] text-[#6D6E76] lg:w-[330px] md:w-[250px] xs:p-4 xxs:p-2"
+            className="border border-medium-gray text-medium-gray lg:w-[330px] md:w-[250px] xs:p-4 xxs:p-2"
           ></input>
           <Button
             text="Subscribe"
-            background="bg-[#FFD050]"
+            background="bg-yellow"
             color="text-black"
           />
         </div>
       </div>
       <div className="flex xs:flex-row xxs:flex-col xxs:gap-4 justify-between items-center p-1 xxs:p-3">
         <div className="flex flex-col">
-          <p className="text-[#6D6E76]">Finstreet 118 2561 Fintown</p>
-          <p className="text-[#6D6E76]">Hello@finsweet.com 020 7993 2905</p>
+          <p className="text-medium-gray">Finstreet 118 2561 Fintown</p>
+          <p className="text-medium-gray">Hello@finsweet.com 020 7993 2905</p>
         </div>
         <div className="flex gap-6">
           <button className="cursor-pointer">

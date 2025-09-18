@@ -13,7 +13,7 @@ export const BlogPost: FC<Props> = ({ img, title, text }) => {
       <img src={img}></img>
       <Author date="Aug 23, 2021 " />
       <h4 className="lg:text-3xl/10 sm:text-xl/8 font-bold">{title}</h4>
-      <p className="text-[#6D6E76] font-normal text-base/7 hidden lg:block">
+      <p className="text-medium-gray font-normal text-base/7 hidden lg:block">
         {text}
       </p>
     </div>

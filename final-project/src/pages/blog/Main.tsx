@@ -12,7 +12,7 @@ export const Main: FC = () => {
         <div className="flex gap-2 items-center">
           <img src="../../../reviewer-1.svg" alt='reviewer' className="sm:size-12 xxs:size-10"></img>
           <div className="flex flex-col">
-            <p className="font-bold sm:text-3xl/10 xxs:text-xl/8 text-[#592EA9]">Andrew Jonson</p>
+            <p className="font-bold sm:text-3xl/10 xxs:text-xl/8 text-purple">Andrew Jonson</p>
             <p className="font-normal text-base/7">Posted on 27th January 2022</p> 
           </div>
         </div>
@@ -27,19 +27,19 @@ export const Main: FC = () => {
       </section>
       <section className="flex flex-col py-8 xl:px-[330px] gap-8 lg:px-[250px] md:px-[100px] xxs:px-10 xxs:py-10">
         <h4 className="font-bold lg:text-4xl/12 md:text-2xl/10 xs:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h4>
-        <p className="text-[#6D6E76] font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
+        <p className="text-medium-gray font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
         <h4 className="font-bold lg:text-4xl/12 md:text-2xl/10 xs:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h4>
-        <p className="text-[#6D6E76] font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
+        <p className="text-medium-gray font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.
         </p>
-        <p className="text-[#6D6E76] font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
+        <p className="text-medium-gray font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
         <ul className="font-bold sm:text-2xl/8 xxs:text-xl/6 opacity-78 flex flex-col list-disc pl-5">
           <li>Lorem ipsum dolor sit amet</li>
           <li>Non blandit massa enim nec scelerisque</li>
           <li>Neque egestas congue quisque egestas</li>
         </ul>
-        <p className="text-[#6D6E76] font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
+        <p className="text-medium-gray font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
         <h4 className="font-bold lg:text-4xl/12 md:text-2xl/10 xs:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h4>
-        <p className="text-[#6D6E76] font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
+        <p className="text-medium-gray font-normal text-base/7 md:line-clamp-none xxs:line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus. Sociis natoque penatibus et magnis dis parturient montes. Ridiculus mus mauris vitae ultricies leo. Neque egestas congue quisque egestas diam. Risus in hendrerit gravida rutrum quisque non.</p>
       </section>
       <section className="flex flex-col gap-8 pt-24 px-20">
         <TitleSection title="What to read next" />
@@ -48,7 +48,7 @@ export const Main: FC = () => {
           <BlogPost img="../../../blogPost-2.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
           <BlogPost img="../../../blogPost-3.png" title="A UX Case Study Creating a Studious Environment for Students:" text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
         </div>
-        <div className="w-full h-[1px] bg-[#6D6E76]"></div>
+        <div className="w-full h-[1px] bg-medium-gray"></div>
       </section>
       <LastSection />
     </main>

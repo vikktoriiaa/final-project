@@ -12,7 +12,7 @@ export const Error404: FC = () => {
     <div className="mx-auto flex flex-col items-center justify-center h-screen">
       <Button
         text="to Home"
-        background="bg-[#FFD050]"
+        background="bg-yellow"
         color="text-black"
         func={navigateToHome}
       />

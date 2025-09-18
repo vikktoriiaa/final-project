@@ -42,8 +42,8 @@ export const AuthorCard: FC<Props> = ({
           className={`absolute backface-hidden flex flex-col gap-2 ${background} p-8 items-center justify-center`}
         >
           <img src={icon} alt="icon" className="sm:size-32 xxs:size-24 p-3" />
-          <h4 className="font-bold text-2xl/10 text-[#232536]">{title}</h4>
-          <p className="text-[#6D6E76] font-normal text-sm/5">{text}</p>
+          <h4 className="font-bold text-2xl/10 text-black">{title}</h4>
+          <p className="text-medium-gray font-normal text-sm/5">{text}</p>
           <div className="flex gap-4">
             <button className="cursor-pointer">
               <img src={`${facebook}`} alt="facebook" className="size-4"></img>

@@ -16,11 +16,11 @@ export const CardCategory: FC<Props> = ({ background, icon, text, title }) => {
         <img
           src={`${icon}`}
           alt="icon"
-          className="lg:size-12 xxs:size-10 bg-[#FBF6EA] p-3"
+          className="lg:size-12 xxs:size-10 bg-light-yellow p-3"
         ></img>
         <h4 className="font-bold lg:text-2xl/10 xss:text-xl/8">{title}</h4>
       </div>
-      <p className="text-[#6D6E76] font-normal text-base/7 lg:line-clamp-none xxs:line-clamp-2">
+      <p className="text-medium-gray font-normal text-base/7 lg:line-clamp-none xxs:line-clamp-2">
         {text}
       </p>
     </div>
