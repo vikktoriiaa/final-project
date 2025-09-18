@@ -1,4 +1,6 @@
 import type { FC } from "react";
+ import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 type Props = {
   img: string;
@@ -10,7 +12,14 @@ type Props = {
 export const CategoryPost: FC<Props> = ({ img, category, title, text }) => {
   return (
     <div className="flex lg:flex-row xxs:flex-col gap-8 justify-center items-center">
-      <img src={img}></img>
+      <LazyLoadImage
+        alt={"photo-blog"}
+        effect="blur"
+        wrapperProps={{
+        style: {transitionDelay: "0.5s"},
+        }}
+        src={img}
+      />
       <div className="flex flex-col gap-4 sm:px-12 xxs:px-3">
         <p className="uppercase text-base/5 font-semibold tracking-[3px] text-purple">
           {category}

@@ -1,4 +1,6 @@
 import { type FC, useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 type Props = {
   background: string;
@@ -41,7 +43,15 @@ export const AuthorCard: FC<Props> = ({
         <div
           className={`absolute backface-hidden flex flex-col gap-2 ${background} p-8 items-center justify-center`}
         >
-          <img src={icon} alt="icon" className="sm:size-32 xxs:size-24 p-3" />
+          <LazyLoadImage
+            alt={"icon"}
+            effect="blur"
+            wrapperProps={{
+            style: {transitionDelay: "0.5s"},
+            }}
+            src={icon}
+            className="sm:size-32 xxs:size-24 p-3"
+          />
           <h4 className="font-bold text-2xl/10 text-black">{title}</h4>
           <p className="text-medium-gray font-normal text-sm/5">{text}</p>
           <div className="flex gap-4">
