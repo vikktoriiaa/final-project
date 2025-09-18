@@ -3,6 +3,8 @@ import { LastSection } from "../../components/common/LastSection";
 import { Quantity } from "../../components/common/Quantity";
 import { TitleSection } from "../../components/common/TitleSection";
 import { AuthorCard } from "../../components/common/AuthorCard";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const Main: FC = () => {
   return (
@@ -17,7 +19,14 @@ export const Main: FC = () => {
         </div>
       </section>
       <section className="sm:px-20 xxs:px-5 relative">
-        <img src="../../../about-img.webp"></img>
+        <LazyLoadImage
+          alt={"blog"}
+          effect="blur"
+          wrapperProps={{
+          style: {transitionDelay: "0.5s"},
+          }}
+          src={"../../../about-img.webp"}
+        />
         <div className="absolute hidden bg-yellow sm:flex gap-4 -bottom-5 left-30 p-6">
           <Quantity text="Blogs Published" number="12+" />
           <Quantity number="18K+" text="Views on Finsweet" />

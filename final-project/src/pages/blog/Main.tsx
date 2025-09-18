@@ -2,6 +2,8 @@ import type { FC } from "react";
 import { TitleSection } from "../../components/common/TitleSection";
 import { BlogPost } from "../../components/common/BlogPost";
 import { LastSection } from "../../components/common/LastSection";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 export const Main: FC = () => {
@@ -23,7 +25,14 @@ export const Main: FC = () => {
         </div>
       </section>
       <section className="sm:px-20 xxs:px-3  py-8">
-        <img src="../../../blog-img.webp"></img>
+        <LazyLoadImage
+            alt={"blog"}
+            effect="blur"
+            wrapperProps={{
+            style: {transitionDelay: "0.5s"},
+            }}
+            src={"../../../blog-img.webp"}
+          />
       </section>
       <section className="flex flex-col py-8 xl:px-[330px] gap-8 lg:px-[250px] md:px-[100px] xxs:px-10 xxs:py-10">
         <h4 className="font-bold lg:text-4xl/12 md:text-2xl/10 xs:text-xl/8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</h4>
