@@ -1,7 +1,25 @@
-import type { FC } from "react";
+import { useState, type FC, type FormEvent } from "react";
 import { Button } from "../../components/common/Button";
+import { sendMail } from "../../../api/email";
 
 export const Main: FC = () => {
+  const [name, setName] = useState("");
+  const [yourEmail, setYourEmail] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [message, setMessage] = useState("");
+
+    const onSubmit = async (e: FormEvent) => {
+    try {
+      e.preventDefault();
+      await sendMail(name, yourEmail, selectedCategory, message);
+      alert("Письмо успешно отправлено");
+      setMessage("");
+      setName("");
+      setYourEmail("");
+    } catch (error) {
+      alert("Ошибка при отправке письма");
+    }
+  };
   return (
     <main className="dark:bg-[#2e3040] dark:text-white">
       <section className="flex flex-col justify-center items-center xl:py-32 sm:py-15 xl:px-84 sm:px-35 xxs:py-5 xxs:px-5 gap-12">
@@ -25,11 +43,32 @@ export const Main: FC = () => {
             <p className="font-normal text-base/7 opacity-60"><a href="mailto:hello@finsweet.com">hello@finsweet.com</a></p>
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-full p-5">
-          <input type="text" name="name" placeholder="Full Name" className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full "></input>
-          <input type="email" name="email" placeholder="Your Email" className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full"></input>
-          <label className="text-base/7 pr-3 w-full">Query Related:</label>
-          <select name="queryRelated" id="queryRelated" className="text-base/7 px-2 py-1 border border-[#6D6E7680] w-full">
+        <form onSubmit={onSubmit} className="flex flex-col gap-4 w-full p-5">
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            placeholder="Full Name"
+            className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full ">
+          </input>
+          <input
+            type="email"
+            name="email"
+            value={yourEmail}
+            onChange={(e) => setYourEmail(e.target.value)}
+            required
+            placeholder="Your Email"
+            className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full">
+          </input>
+          <label htmlFor="queryRelated" className="text-base/7 pr-3 w-full">Query Related:</label>
+          <select
+            id="queryRelated"
+            name="queryRelated"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="text-base/7 px-2 py-1 border border-[#6D6E7680] w-full">
             <optgroup label="Query Related:">
               <option value="info">Product Information</option>
               <option value="support">Technical Support</option>
@@ -39,9 +78,16 @@ export const Main: FC = () => {
               <option value="other">Other</option>
             </optgroup>
           </select>
-          <textarea name="message" placeholder="Message" rows={5} className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full"></textarea>
-          <Button text="Send Message" background="bg-yellow" color="text-black"/>
-        </div>
+          <textarea
+            value={message}
+            name="message"
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Message"
+            rows={5}
+            className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full">
+          </textarea>
+          <Button text="Send Message" background="bg-yellow" color="text-black" type="submit"/>
+        </form>
       </section>
     </main>
   )
