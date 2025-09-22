@@ -7,6 +7,11 @@ export const Main: FC = () => {
   const [yourEmail, setYourEmail] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [message, setMessage] = useState("");
+  const [feedback, setFeedback] = useState(false);
+
+  const handleFeedback = () => {
+    setFeedback(!feedback);
+  };
 
     const onSubmit = async (e: FormEvent) => {
     try {
@@ -44,7 +49,7 @@ export const Main: FC = () => {
           </div>
         </div>
         <form onSubmit={onSubmit} className="flex flex-col gap-4 w-full p-5">
-          <input
+         {!feedback && <><input
             type="text"
             name="name"
             value={name}
@@ -86,7 +91,8 @@ export const Main: FC = () => {
             rows={5}
             className="text-base/7 sm:p-5 xxs:p-2 font-normal border border-[#6D6E7680] w-full">
           </textarea>
-          <Button text="Send Message" background="bg-yellow" color="text-black" type="submit"/>
+            <Button text="Send Message" background="bg-yellow" color="text-black" type="submit" func={handleFeedback} /></>}
+          {feedback && <p className="text-center text-black sm:text-3xl/16 xxs:text-xl/10 font-bold dark:text-white">Thanks for the feedback! We will contact you as soon as possible!</p>}
         </form>
       </section>
     </main>

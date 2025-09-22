@@ -1,8 +1,13 @@
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 export const Footer: FC = () => {
+  const [subscribe, setSubscribe] = useState(false);
+
+  const handleSubscribe = () => {
+    setSubscribe(!subscribe);
+  };
   return (
     <footer
       className="bg-black lg:py-14 lg:px-20 flex flex-col gap-8 md:px-10 md:py-7"
@@ -32,8 +37,8 @@ export const Footer: FC = () => {
         <h4 className="font-bold lg:text-4xl/12 text-white md:text-xl/10">
           Subscribe to our news letter to get latest updates and news
         </h4>
-        <div className="flex gap-2 items-start justify-center xl:flex-row lg:flex-col xs:flex-row xxs:flex-col">
-          <input
+        <form className="flex gap-2 items-start justify-center xl:flex-row lg:flex-col xs:flex-row xxs:flex-col">
+          {!subscribe && <><input
             type="email"
             name="email"
             placeholder="Enter your email..."
@@ -43,9 +48,11 @@ export const Footer: FC = () => {
             text="Subscribe"
             background="bg-yellow"
             color="text-black"
-          />
-        </div>
+            func={handleSubscribe}
+            /></>}
+        </form>
       </div>
+      {subscribe && <div className=" p-2 rounded-full bg-amber-50 flex justify-center items-center font-bold lg:text-xl/12 text-black md:text-lg/10">Thank you for subscribing!</div> }
       <div className="flex xs:flex-row xxs:flex-col xxs:gap-4 justify-between items-center p-1 xxs:p-3">
         <div className="flex flex-col">
           <p className="text-medium-gray">Finstreet 118 2561 Fintown</p>
