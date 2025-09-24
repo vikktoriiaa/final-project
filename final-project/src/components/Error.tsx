@@ -1,6 +1,6 @@
 import { type FC } from "react";
-import { Button } from "./common/Button";
 import { useNavigate } from "react-router-dom";
+import { Button } from "./common/Button";
 
 export const Error404: FC = () => {
   const navigate = useNavigate();

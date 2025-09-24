@@ -5,17 +5,18 @@
 
 @theme {
   --font-display: "Sen", sans-serif; 
-   --breakpoint-xs: 25rem;
-   --breakpoint-xxs: 20rem;
-   --breakpoint-xl: 90rem;
 
-   --color-yellow: #FFD050;
-   --color-light-yellow: #FBF6EA;
-    --color-black: #232536;
-    --color-purple: #592EA9;
-    --color-light-purple: #F4F0F8;
-    --color-light-gray: #F4F4F4;
-    --color-dark-gray: #4C4C4C;
-    --color-medium-gray: #6D6E76;
+  --breakpoint-xs: 25rem;
+  --breakpoint-xxs: 20rem;
+  --breakpoint-xl: 90rem;
+
+  --color-yellow: #FFD050;
+  --color-light-yellow: #FBF6EA;
+  --color-black: #232536;
+  --color-purple: #592EA9;
+  --color-light-purple: #F4F0F8;
+  --color-light-gray: #F4F4F4;
+  --color-dark-gray: #4C4C4C;
+  --color-medium-gray: #6D6E76;
 }
 

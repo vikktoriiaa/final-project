@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
+import { Button } from "./Button";
 
 export const LastSection: FC = () => {
   const navigate = useNavigate();

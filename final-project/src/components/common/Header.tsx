@@ -6,9 +6,9 @@ import { toggleTheme } from "../../features/theme/themeSlice";
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useAppSelector((state) => state.theme);
   const toggleMenu = () => setIsOpen(!isOpen);
   const dispatch = useAppDispatch();
-  const { theme } = useAppSelector((state) => state.theme);
 
   const scrollToFooter = () => {
     const footerElement = document.getElementById("footer");
