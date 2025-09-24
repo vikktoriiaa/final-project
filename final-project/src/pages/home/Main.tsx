@@ -103,7 +103,7 @@ export const Main: FC = () => {
           <AuthorCard background="bg-light-gray" icon="../../leslie.svg" text="Content Writer @Company" title="Leslie Alexander" facebook="../../facebook.svg" twitter="../../twitter.svg" instagram="../../instagram.svg" linkedin="../../linkedin.svg" about="Leslie is a dedicated content creator skilled in producing insightful materials on technology and business. Her writing emphasizes clarity, relevance, and practical value for professionals and enthusiasts alike." />
         </div>
       </section>
-      <section className="flex xl:flex-nowrap xxs:flex-wrap justify-center items-center gap-10 px-20 md:py-10 xxs:py-5 dark:bg-[#F4F0F8] mx-20">
+      <section className="flex xl:flex-nowrap xxs:flex-wrap justify-center items-center gap-10 px-20 md:py-10 xxs:py-5 dark:bg-[#F4F0F8] md:mx-20 xxs:mx-5">
         <div className="flex flex-col">
           <p className="text-[#8b8b8b] text-sm/5 font-normal">We are</p>
           <p className="text-medium-gray font-bold text-2xl/8">Featured in</p>
