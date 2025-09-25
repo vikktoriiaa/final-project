@@ -11,7 +11,7 @@ const PORT = 3001;
 
 // Настройка CORS для разрешения запросов с фронтенда
 app.use(cors({
-  origin: "http://localhost:5173", // Укажите URL вашего фронтенда
+  origin: "http://localhost:5173", 
 }));
 app.use(bodyParser.json());
 
@@ -26,8 +26,8 @@ const transporter = nodemailer.createTransport({
   secure: false, // false для 587, true для 465
   service: "gmail",
   auth: {
-    user: process.env.GMAIL_EMAIL, // Используем GMAIL_EMAIL из .env
-    pass: process.env.GMAIL_PASSWORD, // Используем GMAIL_PASSWORD из .env
+    user: process.env.GMAIL_EMAIL,
+    pass: process.env.GMAIL_PASSWORD, 
   },
 });
 
