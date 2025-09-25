@@ -1,36 +1,41 @@
 import { useState, type FC } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Button } from "./Button";
 
 export const Footer: FC = () => {
   const [subscribe, setSubscribe] = useState(false);
+  const [isActive, setIsActive] = useState(false); 
 
   const handleSubscribe = () => {
     setSubscribe(!subscribe);
   };
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+  }
   return (
     <footer
-      className="bg-black lg:py-14 lg:px-20 flex flex-col gap-8 md:px-10 md:py-7"
+      className="bg-black lg:py-14 lg:px-20 flex flex-col gap-8 md:px-10 md:py-5 xxs:px-5 xxs:py-3"
       id="footer"
     >
       <div className="flex sm:flex-row justify-between items-center bg-black p-4 text-white xxs:flex-col gap-2 xxs:items-start">
-        <img src="../../logo.svg" alt="logo"></img>
+        <img src="../../Logo.svg" alt="logo"></img>
         <nav className="flex sm:flex-row sm:gap-6 xxs:flex-col xxs:gap-2 gap-6 cursor-pointer">
-          <Link to="/" className=" hover:text-blue-400">
+          <NavLink to="/" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
             Home
-          </Link>
-          <Link to="/blog" className=" hover:text-blue-400">
+          </NavLink>
+          <NavLink to="/blog" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
             Blog
-          </Link>
-          <Link to="/about" className=" hover:text-blue-400">
+          </NavLink>
+          <NavLink to="/about" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
             About Us
-          </Link>
-          <Link to="/contact" className=" hover:text-blue-400">
+          </NavLink>
+          <NavLink to="/contact" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
             Contact Us
-          </Link>
-          <Link to="/policy" className=" hover:text-blue-400">
+          </NavLink>
+          <NavLink to="/policy" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
             Private Policy
-          </Link>
+          </NavLink>
         </nav>
       </div>
       <div className="bg-[#2e3040] lg:py-20 lg:px-16 flex lg:flex-row justify-around gap-3 xxs:px-8 xxs:py-10 xxs:flex-col">

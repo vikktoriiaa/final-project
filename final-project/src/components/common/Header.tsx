@@ -1,11 +1,12 @@
 import { useState, type FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "./Button";
 import { useAppDispatch, useAppSelector } from "../../hooks/storeHooks";
 import { toggleTheme } from "../../features/theme/themeSlice";
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const { theme } = useAppSelector((state) => state.theme);
   const toggleMenu = () => setIsOpen(!isOpen);
   const dispatch = useAppDispatch();
@@ -17,13 +18,17 @@ export const Header: FC = () => {
     }
   };
 
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <header
       id="header"
       className="bg-black relative p-4 text-white flex justify-between items-center w-full lg:gap-10"
     >
       <div className="flex gap-4 items-center">
-        <img src="../../logo.svg" alt="logo" />
+        <img src="../../Logo.svg" alt="logo" />
         <button
           className="p-1 text-black font-bold xxs:text-2xl/6 cursor-pointer"
           onClick={() => dispatch(toggleTheme())}
@@ -34,18 +39,18 @@ export const Header: FC = () => {
       </div>
       {/* Меню для больших экранов */}
       <nav className="hidden md:flex gap-6 cursor-pointer items-center">
-        <Link to="/" className="hover:text-blue-400">
+        <NavLink to="/" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
           Home
-        </Link>
-        <Link to="/blog" className="hover:text-blue-400">
+        </NavLink>
+        <NavLink to="/blog" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
           Blog
-        </Link>
-        <Link to="/about" className="hover:text-blue-400">
+        </NavLink>
+        <NavLink to="/about" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
           About Us
-        </Link>
-        <Link to="/contact" className="hover:text-blue-400">
+        </NavLink>
+        <NavLink to="/contact" style={({ isActive }) => (isActive ? { color: "#51a2ff" } : {})} onClick={handleClick}>
           Contact Us
-        </Link>
+        </NavLink>
         <Button
           text="Subscribe"
           background="bg-white"
