@@ -1,0 +1,92 @@
+export const posts = [
+  {
+    img: "../../../blogPost-1.webp",
+    category: "Startup",
+    title: "Design tips for designers that cover everything you need",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-2.webp",
+    category: "BUSINESS",
+    title: "How to build rapport with your web design clients",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-3.webp",
+    category: "Startup",
+    title: "Logo design trends to avoid in 2022",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-5.webp",
+    category: "TECHNOLOGY",
+    title: "8 Figma design systems you can download for free today",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-1.webp",
+    category: "ECONOMY",
+    title: "Font sizes in UI design: The complete guide to follow",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-1.webp",
+    category: "ECONOMY",
+    title: "Font sizes in UI design: The complete guide to follow",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-5.webp",
+    category: "TECHNOLOGY",
+    title: "8 Figma design systems you can download for free today",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-3.webp",
+    category: "Startup",
+    title: "Logo design trends to avoid in 2022",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-2.webp",
+    category: "BUSINESS",
+    title: "How to build rapport with your web design clients",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-1.webp",
+    category: "Startup",
+    title: "Design tips for designers that cover everything you need",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-5.webp",
+    category: "TECHNOLOGY",
+    title: "8 Figma design systems you can download for free today",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-1.webp",
+    category: "Startup",
+    title: "Design tips for designers that cover everything you need",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-2.webp",
+    category: "BUSINESS",
+    title: "How to build rapport with your web design clients",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident..",
+  },
+  {
+    img: "../../../blogPost-1.webp",
+    category: "ECONOMY",
+    title: "Font sizes in UI design: The complete guide to follow",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    img: "../../../blogPost-1.webp",
+    category: "Startup",
+    title: "Design tips for designers that cover everything you need",
+    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+  },
+];
